@@ -1,7 +1,10 @@
-//your JS code here. If required.
-let level = document.getElementById("level");
-let parent = level.parentNode;
-let item= parent.children;
-index = Array.from(item).indexOf(level);
+  // get the element with id "level"
+  let element = document.getElementById("level");
 
- alert("The level of the element is: "+index);
+  let levelCount = 1; // start from the element itself
+  let parent = element.parentElement;
+
+  // loop until we reach the root <html> element
+  while (parent) {
+    levelCount++;          // increment for each parent
+    parent = parent.parentElement;
