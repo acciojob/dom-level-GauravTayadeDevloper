@@ -8,3 +8,6 @@
   while (parent) {
     levelCount++;          // increment for each parent
     parent = parent.parentElement;
+  }
+
+  alert("The level of the element is: " + levelCount);
